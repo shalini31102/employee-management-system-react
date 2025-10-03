@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import Header from '../others/header'
+import Header from '../others/Header'
 import TaskListNumbers from '../others/TaskListNumbers'
 import TaskList from '../TaskList/TaskList'
-import { AuthContext } from '../../context/Authprovider';
+import { AuthContext } from '../../context/Authprovider'
 
 const EmployeeDashboard = ({ changeUser, data, showToast }) => {
     const [userData, setUserData] = useContext(AuthContext);
