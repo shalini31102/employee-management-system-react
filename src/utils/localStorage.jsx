@@ -1,9 +1,11 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
+const AuthContext = createContext();
 
-const employees = [
+const initialEmployees = [
     {
         "id": 1,
         "firstName": "Arjun",
-        "email": "e@e.com",
+        "email": "employee1@example.com",
         "password": "123",
         "taskCounts": {
             "active": 2,
@@ -20,7 +22,7 @@ const employees = [
                 "taskTitle": "Update website",
                 "taskDescription": "Revamp the homepage design",
                 "taskDate": "2024-10-12",
-                "category": "Design" 
+                "category": "Design"
             },
             {
                 "active": false,
@@ -121,90 +123,13 @@ const employees = [
                 "category": "QA"
             }
         ]
-    },
-    {
-        "id": 4,
-        "firstName": "Priya",
-        "email": "employee4@example.com",
-        "password": "123",
-        "taskCounts": {
-            "active": 2,
-            "newTask": 1,
-            "completed": 0,
-            "failed": 0
-        },
-        "tasks": [
-            {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Write documentation",
-                "taskDescription": "Update the project documentation",
-                "taskDate": "2024-10-13",
-                "category": "Documentation"
-            },
-            {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Set up CI/CD",
-                "taskDescription": "Implement continuous integration pipeline",
-                "taskDate": "2024-10-11",
-                "category": "DevOps"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "firstName": "Karan",
-        "email": "employee5@example.com",
-        "password": "123",
-        "taskCounts": {
-            "active": 2,
-            "newTask": 1,
-            "completed": 1,
-            "failed": 0
-        },
-        "tasks": [
-            {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "UI redesign",
-                "taskDescription": "Redesign the user interface for better UX",
-                "taskDate": "2024-10-14",
-                "category": "Design"
-            },
-            {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
-                "taskTitle": "Deploy new build",
-                "taskDescription": "Deploy the latest build to production",
-                "taskDate": "2024-10-09",
-                "category": "DevOps"
-            },
-            {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Client feedback",
-                "taskDescription": "Gather feedback from clients after product launch",
-                "taskDate": "2024-10-12",
-                "category": "Support"
-            }
-        ]
     }
 ];
 
 
 const admin = [{
     "id": 1,
+    "firstName": "Shalini",
     "email": "admin@example.com",
     "password": "123"
 }];
